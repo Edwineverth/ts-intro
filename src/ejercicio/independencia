@@ -1,0 +1,32 @@
+interface Imprint{
+    print(data: string);
+}
+
+class Console implements Imprint{
+    print(data: string) {
+        console.log(data);
+    }
+
+}
+
+class Json implements Imprint{
+    print(data: string){
+        return console.log(JSON.stringify(data));
+    }
+}
+
+class Main {
+    servicePrint: any;
+    constructor(servicePrint: Imprint){
+        this.servicePrint = servicePrint;
+    }
+
+    send(data){
+        this.servicePrint.print(data)
+    }
+}
+
+const a = new Main(new Console);
+const b  = new Main( new Json)
+a.send('dude');
+b.send({a:'prove'})

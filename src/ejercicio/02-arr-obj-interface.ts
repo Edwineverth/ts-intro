@@ -11,12 +11,12 @@ interface Person {
     ability: string [],
     hometown? : string
 }
-
-const person: Person = {
-    name: 'Strider',
-    hp: 100,
-    ability: ['bash', 'counter', 'healing']
-}
-person.hometown = 'New Your'
-
-console.table(person);
+//
+// const person: Person = {
+//     name: 'Strider',
+//     hp: 100,
+//     ability: ['bash', 'counter', 'healing']
+// }
+// person.hometown = 'New Your'
+//
+// console.table(person);
